@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-serif-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 16px rgba(239, 68, 68, 0.6));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.9)) drop-shadow(0 0 20px rgba(249, 115, 22, 0.7));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px rgba(245, 158, 11, 0.75)) drop-shadow(0 0 14px rgba(239, 68, 68, 0.5));
+  }
+  75% {
+    transform: scale(1.05, 1.02) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.85)) drop-shadow(0 0 18px rgba(245, 158, 11, 0.6));
+  }
+}
+
+@keyframes smokeFloat {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-24px) translateX(6px) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-45px) translateX(-4px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+.animate-flame {
+  animation: flicker 1.2s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+.animate-flame-delayed {
+  animation: flicker 1.4s infinite ease-in-out 0.3s;
+  transform-origin: bottom center;
+}
+
+.animate-flame-slow {
+  animation: flicker 1.6s infinite ease-in-out 0.6s;
+  transform-origin: bottom center;
+}
+
+.animate-smoke {
+  animation: smokeFloat 1.8s forwards ease-out;
+}
+
+.animate-balloon {
+  animation: floatGentle 4s infinite ease-in-out;
+}
+
+/* Perspective for envelope */
+.perspective-1000 {
+  perspective: 1000px;
+}
