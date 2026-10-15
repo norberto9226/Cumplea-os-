@@ -1,6 +1,0 @@
-{
-  "name": "Celebración de Cumpleaños Mágica",
-  "description": "Una hermosa experiencia interactiva de cumpleaños con pastel de velas soplables, música festiva, confeti y una carta personalizada.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
